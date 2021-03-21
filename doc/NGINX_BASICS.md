@@ -1,6 +1,6 @@
 # NGINX Basics
 
-Go to the **[Table of Contents](https://github.com/trimstray/nginx-admins-handbook#table-of-contents)** or **[What's next?](https://github.com/trimstray/nginx-admins-handbook#whats-next)** section.
+Go to the **[목차](https://github.com/trimstray/nginx-admins-handbook#table-of-contents)** or **[What's next?](https://github.com/trimstray/nginx-admins-handbook#whats-next)** section.
 
 - **[≡ NGINX Basics](#nginx-basics)**
   * [Directories and files](#directories-and-files)
@@ -1594,7 +1594,7 @@ location optional_modifier location_match { ... }
 
 - `^~`: assuming this block is the best non-RE match, a carat followed by a tilde modifier means that RE matching will not take place
 
-And now, a short introduction to determines location priority:
+And now, a short 소개 to determines location priority:
 
 - the exact match is the best priority (processed first); ends search if match
 

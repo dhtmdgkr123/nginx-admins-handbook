@@ -1,6 +1,6 @@
 # Base Rules
 
-Go back to the **[Table of Contents](https://github.com/trimstray/nginx-admins-handbook#table-of-contents)** or **[What's next?](https://github.com/trimstray/nginx-admins-handbook#whats-next)** section.
+Go back to the **[목차](https://github.com/trimstray/nginx-admins-handbook#table-of-contents)** or **[What's next?](https://github.com/trimstray/nginx-admins-handbook#whats-next)** section.
 
   > :pushpin:&nbsp; These are the basic set of rules to keep NGINX in good condition.
 
@@ -1335,7 +1335,7 @@ http {
 
 # Debugging
 
-Go back to the **[Table of Contents](https://github.com/trimstray/nginx-admins-handbook#table-of-contents)** or **[What's next?](https://github.com/trimstray/nginx-admins-handbook#whats-next)** section.
+Go back to the **[목차](https://github.com/trimstray/nginx-admins-handbook#table-of-contents)** or **[What's next?](https://github.com/trimstray/nginx-admins-handbook#whats-next)** section.
 
   > :pushpin:&nbsp; NGINX has many methods for troubleshooting issues. In this chapter I will present a few ways to deal with them.
 
@@ -1612,7 +1612,7 @@ location = /backend-mirror {
 
 # Performance
 
-Go back to the **[Table of Contents](https://github.com/trimstray/nginx-admins-handbook#table-of-contents)** or **[What's next?](https://github.com/trimstray/nginx-admins-handbook#whats-next)** section.
+Go back to the **[목차](https://github.com/trimstray/nginx-admins-handbook#table-of-contents)** or **[What's next?](https://github.com/trimstray/nginx-admins-handbook#whats-next)** section.
 
   > :pushpin:&nbsp; NGINX is a insanely fast, but you can adjust a few things to make sure it's as fast as possible for your use case.
 
@@ -1705,7 +1705,7 @@ server {
 
 - [RFC 7540 - HTTP/2](https://tools.ietf.org/html/rfc7540) <sup>[IETF]</sup>
 - [RFC 7540 - HTTP/2: Security Considerations](https://tools.ietf.org/html/rfc7540#section-10) <sup>[IETF]</sup>
-- [Introduction to HTTP/2](https://developers.google.com/web/fundamentals/performance/http2/)
+- [소개 to HTTP/2](https://developers.google.com/web/fundamentals/performance/http2/)
 - [What is HTTP/2 - The Ultimate Guide](https://kinsta.com/learn/what-is-http2/)
 - [The HTTP/2 Protocol: Its Pros & Cons and How to Start Using It](https://www.upwork.com/hiring/development/the-http2-protocol-its-pros-cons-and-how-to-start-using-it/)
 - [HTTP/2 Compatibility with old Browsers and Servers](http://qnimate.com/http2-compatibility-with-old-browsers-and-servers/)
@@ -2312,7 +2312,7 @@ location /videos {
 
 # Hardening
 
-Go back to the **[Table of Contents](https://github.com/trimstray/nginx-admins-handbook#table-of-contents)** or **[What's next?](https://github.com/trimstray/nginx-admins-handbook#whats-next)** section.
+Go back to the **[목차](https://github.com/trimstray/nginx-admins-handbook#table-of-contents)** or **[What's next?](https://github.com/trimstray/nginx-admins-handbook#whats-next)** section.
 
   > :pushpin:&nbsp; In this chapter I will talk about some of the NGINX hardening approaches and security standards.
 
@@ -2329,7 +2329,7 @@ Go back to the **[Table of Contents](https://github.com/trimstray/nginx-admins-h
   * [Hide Nginx server signature](#beginner-hide-nginx-server-signature)
   * [Hide upstream proxy headers](#beginner-hide-upstream-proxy-headers)
   * [Remove support for legacy and risky HTTP request headers](#beginner-remove-support-for-legacy-and-risky-http-request-headers)
-  * [Use only the latest supported OpenSSL version](#beginner-use-only-the-latest-supported-openssl-version)
+  * [Use only the latest supported OpenSSL 버전](#beginner-use-only-the-latest-supported-openssl-version)
   * [Force all connections over TLS](#beginner-force-all-connections-over-tls)
   * [Use min. 2048-bit for RSA and 256-bit for ECC](#beginner-use-min-2048-bit-for-rsa-and-256-bit-for-ecc)
   * [Keep only TLS 1.3 and TLS 1.2](#beginner-keep-only-tls-13-and-tls-12)
@@ -4148,7 +4148,7 @@ add_header Content-Security-Policy "default-src 'none'; script-src 'self'; conne
 - [Content Security Policy (CSP) Quick Reference Guide](https://content-security-policy.com/)
 - [Content Security Policy Cheat Sheet – OWASP](https://www.owasp.org/index.php/Content_Security_Policy_Cheat_Sheet)
 - [Content Security Policy – OWASP](https://www.owasp.org/index.php/Content_Security_Policy)
-- [Content Security Policy - An Introduction - Scott Helme](https://scotthelme.co.uk/content-security-policy-an-introduction/)
+- [Content Security Policy - An 소개 - Scott Helme](https://scotthelme.co.uk/content-security-policy-an-introduction/)
 - [CSP Cheat Sheet - Scott Helme](https://scotthelme.co.uk/csp-cheat-sheet/)
 - [Security HTTP Headers - Content-Security-Policy](https://zinoui.com/blog/security-http-headers#content-security-policy)
 - [CSP Evaluator](https://csp-evaluator.withgoogle.com/)
@@ -4375,7 +4375,7 @@ location /api {
 - [Vulnerability name: Unsafe HTTP methods](https://www.onwebsecurity.com/security/unsafe-http-methods.html)
 - [Cross Site Tracing](https://owasp.org/www-community/attacks/Cross_Site_Tracing)
 - [Cross-Site Tracing (XST): The misunderstood vulnerability](https://deadliestwebattacks.com/2010/05/18/cross-site-tracing-xst-the-misunderstood-vulnerability/)
-- [Penetration Testing Of A Web Application Using Dangerous HTTP Methods](https://www.sans.org/reading-room/whitepapers/testing/penetration-testing-web-application-dangerous-http-methods-33945) <sup>[pdf]</sup>
+- [Penetration Testing Of A Web Application Using Dangerous HTTP 메소드](https://www.sans.org/reading-room/whitepapers/testing/penetration-testing-web-application-dangerous-http-methods-33945) <sup>[pdf]</sup>
 - [Blocking/allowing IP addresses (from this handbook)](HELPERS.md#blockingallowing-ip-addresses)
 - [allow and deny (from this handbook)](NGINX_BASICS.md#allow-and-deny)
 - [Set the HTTP headers with add_header and proxy_*_header directives properly - Base Rules - P1 (from this handbook)](#beginner-set-the-http-headers-with-add_header-and-proxy__header-directives-properly)
@@ -4537,7 +4537,7 @@ send_timeout 10s;           # 6default: 0s
 
 # Reverse Proxy
 
-Go back to the **[Table of Contents](https://github.com/trimstray/nginx-admins-handbook#table-of-contents)** or **[What's next?](https://github.com/trimstray/nginx-admins-handbook#whats-next)** section.
+Go back to the **[목차](https://github.com/trimstray/nginx-admins-handbook#table-of-contents)** or **[What's next?](https://github.com/trimstray/nginx-admins-handbook#whats-next)** section.
 
   > :pushpin:&nbsp; One of the frequent uses of the NGINX is setting it up as a proxy server that can off load much of the infrastructure concerns of a high-volume distributed web application.
 
@@ -4933,7 +4933,7 @@ location /foo {
 
 # Load Balancing
 
-Go back to the **[Table of Contents](https://github.com/trimstray/nginx-admins-handbook#table-of-contents)** or **[What's next?](https://github.com/trimstray/nginx-admins-handbook#whats-next)** section.
+Go back to the **[목차](https://github.com/trimstray/nginx-admins-handbook#table-of-contents)** or **[What's next?](https://github.com/trimstray/nginx-admins-handbook#whats-next)** section.
 
   > :pushpin:&nbsp; Load balancing is a useful mechanism to distribute incoming traffic around several capable servers. We may improve of some rules about the NGINX working as a load balancer.
 
@@ -5002,7 +5002,7 @@ upstream backend {
 
 # Others
 
-Go back to the **[Table of Contents](https://github.com/trimstray/nginx-admins-handbook#table-of-contents)** or **[What's next?](https://github.com/trimstray/nginx-admins-handbook#whats-next)** section.
+Go back to the **[목차](https://github.com/trimstray/nginx-admins-handbook#table-of-contents)** or **[What's next?](https://github.com/trimstray/nginx-admins-handbook#whats-next)** section.
 
   > :pushpin:&nbsp; This rules aren't strictly related to the NGINX but in my opinion they're also very important aspect of security.
 

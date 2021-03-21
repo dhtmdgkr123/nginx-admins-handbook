@@ -55,9 +55,9 @@
 
 ****
 
-# Table of Contents
+# 목차
 
-- **[Introduction](#introduction)**<a id="toc-introduction"></a>
+- **[소개](#introduction)**<a id="toc-introduction"></a>
   * [Prologue](#prologue)
   * [Why I created this handbook](#why-i-created-this-handbook)
   * [Who this handbook is for](#who-this-handbook-is-for)
@@ -108,7 +108,7 @@
 <summary><b>Other chapters</b></summary><br>
 
 - **[HTTP Basics](doc/HTTP_BASICS.md#http-basics)**<a id="toc-http-basics"></a>
-  * [Introduction](doc/HTTP_BASICS.md#introduction-1)
+  * [소개](doc/HTTP_BASICS.md#introduction-1)
   * [Features and architecture](doc/HTTP_BASICS.md#features-and-architecture)
   * [HTTP/2](doc/HTTP_BASICS.md#http2)
     * [How to debug HTTP/2?](doc/HTTP_BASICS.md#how-to-debug-http2)
@@ -117,18 +117,18 @@
   * [Connection vs request](doc/HTTP_BASICS.md#connection-vs-request)
   * [HTTP Headers](doc/HTTP_BASICS.md#http-headers)
     * [Header compression](#header-compression)
-  * [HTTP Methods](doc/HTTP_BASICS.md#http-methods)
+  * [HTTP 메소드](doc/HTTP_BASICS.md#http-methods)
   * [Request](doc/HTTP_BASICS.md#request)
     * [Request line](doc/HTTP_BASICS.md#request-line)
-      * [Methods](doc/HTTP_BASICS.md#methods)
+      * [메소드](doc/HTTP_BASICS.md#methods)
       * [Request URI](doc/HTTP_BASICS.md#request-uri)
-      * [HTTP version](doc/HTTP_BASICS.md#http-version)
+      * [HTTP 버전](doc/HTTP_BASICS.md#http-version)
     * [Request header fields](doc/HTTP_BASICS.md#request-header-fields)
     * [Message body](doc/HTTP_BASICS.md#message-body)
     * [Generate requests](doc/HTTP_BASICS.md#generate-requests)
   * [Response](doc/HTTP_BASICS.md#response)
     * [Status line](doc/HTTP_BASICS.md#status-line)
-      * [HTTP version](doc/HTTP_BASICS.md#http-version-1)
+      * [HTTP 버전](doc/HTTP_BASICS.md#http-version-1)
       * [Status codes and reason phrase](doc/HTTP_BASICS.md#status-codes-and-reason-phrase)
     * [Response header fields](doc/HTTP_BASICS.md#response-header-fields)
     * [Message body](doc/HTTP_BASICS.md#message-body-1)
@@ -137,7 +137,7 @@
   * [Back-End web architecture](doc/HTTP_BASICS.md#back-end-web-architecture)
   * [Useful video resources](doc/HTTP_BASICS.md#useful-video-resources)
 - **[SSL/TLS Basics](doc/SSL_TLS_BASICS.md#ssltls-basics)**<a id="toc-ssltls-basics"></a>
-  * [Introduction](doc/SSL_TLS_BASICS.md#introduction-2)
+  * [소개](doc/SSL_TLS_BASICS.md#introduction-2)
   * [TLS versions](doc/SSL_TLS_BASICS.md#tls-versions)
   * [TLS handshake](doc/SSL_TLS_BASICS.md#tls-handshake)
     * [In which layer is TLS situated within the TCP/IP stack?](doc/SSL_TLS_BASICS.md#in-which-layer-is-tls-situated-within-the-tcpip-stack)
@@ -275,14 +275,14 @@
       * [Analyse log file and print requests with 4xx and 5xx](doc/HELPERS.md#analyse-log-file-and-print-requests-with-4xx-and-5xx)
       * [Analyse log file remotely](doc/HELPERS.md#analyse-log-file-remotely-1)
   * [Testing](doc/HELPERS.md#testing)
-    * [Build OpenSSL 1.0.2-chacha version](doc/HELPERS.md#build-openssl-102-chacha-version)
+    * [Build OpenSSL 1.0.2-chacha 버전](doc/HELPERS.md#build-openssl-102-chacha-version)
     * [Send request and show response headers](doc/HELPERS.md#send-request-and-show-response-headers)
     * [Send request with http method, user-agent, follow redirects and show response headers](doc/HELPERS.md#send-request-with-http-method-user-agent-follow-redirects-and-show-response-headers)
     * [Send multiple requests](doc/HELPERS.md#send-multiple-requests)
     * [Testing SSL connection](doc/HELPERS.md#testing-ssl-connection)
     * [Testing SSL connection (debug mode)](doc/HELPERS.md#testing-ssl-connection-debug-mode)
     * [Testing SSL connection with SNI support](doc/HELPERS.md#testing-ssl-connection-with-sni-support)
-    * [Testing SSL connection with specific SSL version](doc/HELPERS.md#testing-ssl-connection-with-specific-ssl-version)
+    * [Testing SSL connection with specific SSL 버전](doc/HELPERS.md#testing-ssl-connection-with-specific-ssl-version)
     * [Testing SSL connection with specific cipher](doc/HELPERS.md#testing-ssl-connection-with-specific-cipher)
     * [Testing OCSP Stapling](doc/HELPERS.md#testing-ocsp-stapling)
     * [Verify 0-RTT](doc/HELPERS.md#verify-0-rtt)
@@ -464,7 +464,7 @@
   * [Hide Nginx server signature](doc/RULES.md#beginner-hide-nginx-server-signature)
   * [Hide upstream proxy headers](doc/RULES.md#beginner-hide-upstream-proxy-headers)
   * [Remove support for legacy and risky HTTP request headers](doc/RULES.md#beginner-remove-support-for-legacy-and-risky-http-request-headers)
-  * [Use only the latest supported OpenSSL version](doc/RULES.md#beginner-use-only-the-latest-supported-openssl-version)
+  * [Use only the latest supported OpenSSL 버전](doc/RULES.md#beginner-use-only-the-latest-supported-openssl-version)
   * [Force all connections over TLS](doc/RULES.md#beginner-force-all-connections-over-tls)
   * [Use min. 2048-bit for RSA and 256-bit for ECC](doc/RULES.md#beginner-use-min-2048-bit-for-rsa-and-256-bit-for-ecc)
   * [Keep only TLS 1.3 and TLS 1.2](doc/RULES.md#beginner-keep-only-tls-13-and-tls-12)
@@ -518,7 +518,7 @@
 
 </details>
 
-# Introduction
+# 소개
 
 <br>
 
@@ -711,7 +711,7 @@ New chapters:
 Existing chapters:
 
 <details>
-<summary><b>Introduction</b></summary><br>
+<summary><b>소개</b></summary><br>
 
   - [x] _Prologue_
   - [x] _Why I created this handbook_
@@ -830,10 +830,10 @@ Existing chapters:
   - [x] _Connection vs request_
   - [x] _HTTP Headers_
     - [x] _Header compression_
-  - [x] _HTTP Methods_
+  - [x] _HTTP 메소드_
   - [x] _Request_
     - [x] _Request line_
-      - [x] _Methods_
+      - [x] _메소드_
       - [x] _Request URI_
       - [x] _HTTP version_
     - [x] _Request header fields_
@@ -1263,7 +1263,7 @@ Remember, these are only guidelines. My point of view may be different from your
 | [Disable unnecessary modules](doc/RULES.md#beginner-disable-unnecessary-modules)<br><sup>Limits vulnerabilities, improve performance and memory efficiency.</sup> | Hardening | ![medium](static/img/priorities/medium.png) |
 | [Hide Nginx version number](doc/RULES.md#beginner-hide-nginx-version-number)<br><sup>Don't disclose sensitive information about NGINX.</sup> | Hardening | ![medium](static/img/priorities/medium.png) |
 | [Hide Nginx server signature](doc/RULES.md#beginner-hide-nginx-server-signature)<br><sup>Don't disclose sensitive information about NGINX.</sup> | Hardening | ![medium](static/img/priorities/medium.png) |
-| [Use only the latest supported OpenSSL version](doc/RULES.md#beginner-use-only-the-latest-supported-openssl-version)<br><sup>Stay protected from SSL security threats and don't miss out of new features.</sup> | Hardening | ![medium](static/img/priorities/medium.png) |
+| [Use only the latest supported OpenSSL 버전](doc/RULES.md#beginner-use-only-the-latest-supported-openssl-version)<br><sup>Stay protected from SSL security threats and don't miss out of new features.</sup> | Hardening | ![medium](static/img/priorities/medium.png) |
 | [Prevent Replay Attacks on Zero Round-Trip Time](doc/RULES.md#beginner-prevent-replay-attacks-on-zero-round-trip-time)<br><sup>0-RTT is disabled by default but you should know that enabling this option creates a significant security risks.</sup> | Hardening | ![medium](static/img/priorities/medium.png) |
 | [Mitigation of CRIME/BREACH attacks](doc/RULES.md#beginner-mitigation-of-crimebreach-attacks)<br><sup>Disable HTTP compression or compress only zero sensitive content.</sup> | Hardening | ![medium](static/img/priorities/medium.png) |
 | [Deny the use of browser features (Feature-Policy)](doc/RULES.md#beginner-deny-the-use-of-browser-features-feature-policy)<br><sup>A mechanism to allow and deny the use of browser features.</sup> | Hardening | ![medium](static/img/priorities/medium.png) |
@@ -1560,7 +1560,7 @@ _In this ebook you will learn:_
 
 <p>
 &nbsp;&nbsp;:black_small_square: <a href="https://openresty.org/download/agentzh-nginx-tutorials-en.html"><b>agentzh's Nginx Tutorials</b></a><br>
-&nbsp;&nbsp;:black_small_square: <a href="http://agentzh.org/misc/slides/nginx-conf-scripting/nginx-conf-scripting.html#1"><b>Introduction to nginx.conf scripting</b></a><br>
+&nbsp;&nbsp;:black_small_square: <a href="http://agentzh.org/misc/slides/nginx-conf-scripting/nginx-conf-scripting.html#1"><b>소개 to nginx.conf scripting</b></a><br>
 &nbsp;&nbsp;:black_small_square: <a href="http://www.nginx-discovery.com/"><b>Nginx discovery journey</b></a><br>
 &nbsp;&nbsp;:black_small_square: <a href="http://www.nginxguts.com/"><b>Nginx Guts</b></a><br>
 &nbsp;&nbsp;:black_small_square: <a href="https://gist.github.com/carlessanagustin/9509d0d31414804da03b"><b>Nginx Cheatsheet</b></a><br>
@@ -1738,9 +1738,9 @@ _In this ebook you will learn:_
 &nbsp;&nbsp;:black_small_square: <a href="https://www.evanmiller.org/nginx-modules-guide.html"><b>Emiller’s Guide To Nginx Module Development</b></a><br>
 &nbsp;&nbsp;:black_small_square: <a href="http://www.evanmiller.org/nginx-modules-guide-advanced.html"><b>Emiller’s Advanced Topics In Nginx Module Development</b></a><br>
 &nbsp;&nbsp;:black_small_square: <a href="https://www.airpair.com/nginx/extending-nginx-tutorial"><b>NGINX Tutorial: Developing Modules</b></a><br>
-&nbsp;&nbsp;:black_small_square: <a href="https://www.openmymind.net/An-Introduction-To-OpenResty-Nginx-Lua/"><b>An Introduction To OpenResty (nginx + lua) - Part 1</b></a><br>
-&nbsp;&nbsp;:black_small_square: <a href="https://www.openmymind.net/An-Introduction-To-OpenResty-Part-2/"><b>An Introduction To OpenResty - Part 2 - Concepts</b></a><br>
-&nbsp;&nbsp;:black_small_square: <a href="https://www.openmymind.net/An-Introduction-To-OpenResty-Part-3/"><b>An Introduction To OpenResty - Part 3</b></a><br>
+&nbsp;&nbsp;:black_small_square: <a href="https://www.openmymind.net/An-소개-To-OpenResty-Nginx-Lua/"><b>An 소개 To OpenResty (nginx + lua) - Part 1</b></a><br>
+&nbsp;&nbsp;:black_small_square: <a href="https://www.openmymind.net/An-소개-To-OpenResty-Part-2/"><b>An 소개 To OpenResty - Part 2 - Concepts</b></a><br>
+&nbsp;&nbsp;:black_small_square: <a href="https://www.openmymind.net/An-소개-To-OpenResty-Part-3/"><b>An 소개 To OpenResty - Part 3</b></a><br>
 &nbsp;&nbsp;:black_small_square: <a href="https://blog.dutchcoders.io/openresty-with-dynamic-generated-certificates/"><b>OpenResty (Nginx) with dynamically generated certificates</b></a><br>
 &nbsp;&nbsp;:black_small_square: <a href="https://github.com/openresty/programming-openresty"><b>Programming OpenResty</b></a><br>
 </p>
@@ -1825,14 +1825,14 @@ _In this ebook you will learn:_
 
 # What's next?
 
-Go back to the [Table of Contents](#table-of-contents) or read the next chapters:
+Go back to the [목차](#table-of-contents) or read the next chapters:
 
 - **[HTTP Basics](doc/HTTP_BASICS.md#http-basics)**<a id="toc-http-basics-2"></a>
-  > Introduction to HTTP.
+  > 소개 to HTTP.
 - **[SSL/TLS Basics](doc/SSL_TLS_BASICS.md#ssltls-basics)**<a id="toc-ssltls-basics-2"></a>
-  > Introduction to SSL/TLS.
+  > 소개 to SSL/TLS.
 - **[NGINX Basics](doc/NGINX_BASICS.md#nginx-basics)**<a id="toc-nginx-basics-2"></a>
-  > Introduction and explanation of the NGINX mechanisms.
+  > 소개 and explanation of the NGINX mechanisms.
 - **[Helpers](doc/HELPERS.md#helpers)**<a id="toc-helpers-2"></a>
   > One-liners, commands, utilities for building NGINX, and more.
 - **[Base Rules (16)](doc/RULES.md#base-rules)**<a id="toc-base-rules-2"></a>

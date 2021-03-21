@@ -1,9 +1,9 @@
 # SSL/TLS Basics
 
-Go back to the **[Table of Contents](https://github.com/trimstray/nginx-admins-handbook#table-of-contents)** or **[What's next?](https://github.com/trimstray/nginx-admins-handbook#whats-next)** section.
+Go back to the **[목차](https://github.com/trimstray/nginx-admins-handbook#table-of-contents)** or **[What's next?](https://github.com/trimstray/nginx-admins-handbook#whats-next)** section.
 
 - **[≡ SSL/TLS Basics](#ssltls-basics)**
-  * [Introduction](#introduction)
+  * [소개](#introduction)
   * [TLS versions](#tls-versions)
   * [TLS handshake](#tls-handshake)
     * [In which layer is TLS situated within the TCP/IP stack?](#in-which-layer-is-tls-situated-within-the-tcpip-stack)
@@ -27,7 +27,7 @@ Go back to the **[Table of Contents](https://github.com/trimstray/nginx-admins-h
   * [Verify your SSL, TLS & Ciphers implementation](#verify-your-ssl-tls--ciphers-implementation)
   * [Useful video resources](#useful-video-resources)
 
-#### Introduction
+#### 소개
 
 TLS stands for _Transport Layer Security_. It is a protocol that provides privacy and data integrity between two communicating applications. It’s the most widely deployed security protocol used today replacing _Secure Socket Layer_ (SSL), and is used for web browsers and other applications that require data to be securely exchanged over a network.
 
@@ -58,7 +58,7 @@ I will not describe the SSL/TLS protocols meticulously so you have to look at th
 - [The First Few Milliseconds of an HTTPS Connection](http://www.moserware.com/2009/06/first-few-milliseconds-of-https.html)
 - [Best Practices for ACME Client Operations](https://docs.https.dev/acme-ops)
 - [SSL Labs Grading 2018](https://discussions.qualys.com/docs/DOC-6321-ssl-labs-grading-2018)
-- [SSL Testing Methods](https://securityboulevard.com/2020/02/ssl-testing-methods/)
+- [SSL Testing 메소드](https://securityboulevard.com/2020/02/ssl-testing-methods/)
 - [SSL/TLS Threat Model](https://blog.ivanristic.com/SSL_Threat_Model.png)
 - [Baseline requirements documents (SSL/TLS server certificates)](https://cabforum.org/baseline-requirements-documents/)
 
