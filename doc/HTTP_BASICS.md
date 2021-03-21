@@ -1,49 +1,48 @@
-# HTTP Basics
+# HTTP 기본
 
-Go back to the **[Table of Contents](https://github.com/trimstray/nginx-admins-handbook#table-of-contents)** or **[What's next?](https://github.com/trimstray/nginx-admins-handbook#whats-next)** section.
+Go back to the **[목차](https://github.com/trimstray/nginx-admins-handbook#table-of-contents)** or **[What's next?](https://github.com/trimstray/nginx-admins-handbook#whats-next)** section.
 
-- **[≡ HTTP Basics](#http-basics)**
-  * [Introduction](#introduction)
-  * [Features and architecture](#features-and-architecture)
+- **[≡ HTTP 기본](#http-basics)**
+  * [소개](#introduction)
+  * [기능 & 설계](#features-and-architecture)
   * [HTTP/2](#http2)
-    * [How to debug HTTP/2?](#how-to-debug-http2)
+    * [HTTP/2 디버깅 하는 방법?](#how-to-debug-http2)
   * [HTTP/3](#http3)
   * [URI vs URL](#uri-vs-url)
   * [Connection vs request](#connection-vs-request)
-  * [HTTP Headers](#http-headers)
-    * [Header compression](#header-compression)
-  * [HTTP Methods](#http-methods)
-  * [Request](#request)
+  * [HTTP 헤더들](#http-headers)
+    * [헤더 압축](#header-compression)
+  * [HTTP 메소드](#http-methods)
+  * [요청](#request)
     * [Request line](#request-line)
-      * [Methods](#methods)
+      * [메소드](#methods)
       * [Request URI](#request-uri)
-      * [HTTP version](#http-version)
-    * [Request header fields](#request-header-fields)
-    * [Message body](#message-body)
-    * [Generate requests](#generate-requests)
+      * [HTTP 버전](#http-version)
+    * [요청 헤더 fields](#request-header-fields)
+    * [메세지 바디](#message-body)
+    * [요청 생성](#generate-requests)
   * [Response](#response)
     * [Status line](#status-line)
-      * [HTTP version](#http-version-1)
-      * [Status codes and reason phrase](#status-codes-and-reason-phrase)
-    * [Response header fields](#response-header-fields)
+      * [HTTP 버전](#http-version-1)
+      * [상태 코드 and reason phrase](#status-codes-and-reason-phrase)
+    * [응답 헤더 필드](#response-header-fields)
     * [Message body](#message-body-1)
   * [HTTP client](#http-client)
-    * [IP address shortcuts](#ip-address-shortcuts)
-  * [Back-End web architecture](#back-end-web-architecture)
-  * [Useful video resources](#useful-video-resources)
+    * [단축된 IP 주소](#ip-address-shortcuts)
+  * [웹 백엔드 설계](#back-end-web-architecture)
+  * [참고 영상자료](#useful-video-resources)
 
 #### Introduction
 
-Simply put, HTTP stands for hypertext transfer protocol and is used for transmitting data (e.g. web pages) over the Internet.
+간단히 말해 HTTP는 하이퍼텍스트 전송 프로토콜을 의미하며 인터넷을 통해 데이터(ex: 웹 페이지)를 전송하는 데 사용된다.
+하단 리스트는 HTTP에 사용되는 중요한 상식들이다.:
 
-Some important information about HTTP:
+- 모든 요청은 클라이언트에서 시작된다(ex: 브라우저)
+- 서버가 요청에 응답한다
+- 요청, 응답은 읽을 수 있는 텍스트이다.
+- 요청은 각각 독립적이며 서버가 해당 요청을 추적할 필요가 없다 
 
-- all requests originate at the client (e.g. browser)
-- the server responds to a request
-- the requests and responses are in readable text
-- the requests are independent of each other and the server doesn’t need to track the requests
-
-I will not describe the HTTP protocol meticulously so you have to look at this as an introduction. I will discuss only the most important things because we have some great documents which describe this protocol in a great deal of detail:
+HTTP 프로토콜에 대해 꼼꼼하게 설명하지 않을 예정이니, 소개 부분을 봐야한다. 우리는 이 프로토콜을 매우 상세하게 설명한 훌륭한 문서들이 있기 때문에, 가장 중요한 것에 대해서만 이야기 할 것이다.:
 
 - [RFC 2616 - HTTP/1.1](https://tools.ietf.org/html/rfc2616) <sup>[IETF]</sup>
 - [RFC 7230 - HTTP/1.1: Message Syntax and Routing](https://tools.ietf.org/html/rfc7230) <sup>[IETF]</sup>
@@ -52,21 +51,21 @@ I will not describe the HTTP protocol meticulously so you have to look at this a
 - [LWP in Action - Chapter 2. Web Basics](http://lwp.interglacial.com/ch02_01.htm)
 - [HTTP and everything you need to know about it](https://medium.com/faun/http-and-everything-you-need-to-know-about-it-8273bc224491)
 
-I also recommend to read:
+밑에꺼도 읽어보는걸 추천:
 
-- [Mini HTTP guide for developers](https://charemza.name/blog/posts/abstractions/http/http-guide-for-developers/)
-- [10 Great Web Performance Blogs](https://www.aaronpeters.nl/blog/10-great-web-performance-blogs/)
+- [개발자를 위한 작은 Http 가이드](https://charemza.name/blog/posts/abstractions/http/http-guide-for-developers/)
+- [10대 웹 성능 관련 블로그](https://www.aaronpeters.nl/blog/10-great-web-performance-blogs/)
 
-We have some interesting books:
+HTTP에 관한 흥미로운 서적들:
 
 - [HTTP: The Definitive Guide](https://www.amazon.com/HTTP-Definitive-Guide-Guides-ebook/dp/B0043D2EKO)
 - [High Performance Browser Networking](https://hpbn.co/)
 
-Look also at the [useful video resources](#useful-video-resources) section of this chapter. And finally look at [this](https://github.com/bigcompany/know-your-http) amazing series of A1-sized posters about the HTTP protocol.
+[볼만한 영상](#useful-video-resources) 섹션도 유용하니 봐야한다.그리고 마지막으로 [this](https://github.com/bigcompany/know-your-http) HTTP에 관한 놀라운 A1 사이즈의 포스터를 봐야 한다.
 
 #### Features and architecture
 
-The HTTP (1.0/1.1 = h1) protocol is a request/response protocol based on the client/server based architecture where web browsers, robots and search engines, etc. act like HTTP clients, and the Web server acts as a server. This is HTTP's message-based model. Every HTTP interaction includes a request and response.
+HTTP (1.0 / 1.1 = h1) 프로토콜은 웹 브라우저, 로봇 및 검색 엔진 등이 HTTP 클라이언트처럼 작동하고 웹 서버가 서버로 작동하는 클라이언트/서버 기반 아키텍처를 기반으로하는 요청/응답 프로토콜입니다. 이것은 HTTP의 메시지 기반 모델이다. 모든 HTTP 상호 작용에는 요청과 응답이 포함된다.
 
 By its nature, HTTP is stateless. Stateless means that all requests are separate from each other. So each request from your browser must contain enough information on its own for the server to fulfill the request.
 
@@ -118,7 +117,7 @@ I will not describe HTTP/2 because there are brilliant studies:
 
 - [RFC 7540 - HTTP/2](https://tools.ietf.org/html/rfc7540) <sup>[IETF]</sup>
 - [HTTP/2 finalized - a quick overview](https://evertpot.com/http-2-finalized/)
-- [Introduction to HTTP/2](https://developers.google.com/web/fundamentals/performance/http2)
+- [HTTP/2 소개](https://developers.google.com/web/fundamentals/performance/http2)
 - [HTTP2 Explained](https://daniel.haxx.se/http2/)
 - [HTTP/2 in Action](https://www.manning.com/books/http2-in-action)
 - [HTTP/2 Frequently Asked Questions](https://http2.github.io/faq/)
@@ -243,7 +242,7 @@ Please see also:
 - [HPACK: Header Compression for HTTP/2](https://http2.github.io/http2-spec/compression.html)
 - [HPACK: the silent killer (feature) of HTTP/2](https://blog.cloudflare.com/hpack-the-silent-killer-feature-of-http-2/)
 
-#### HTTP Methods
+#### HTTP 메소드
 
 The HTTP protocol includes a set of methods that indicate which action to be done for a resource. The most common methods are `GET` and `POST`. But there are a few others, too:
 
@@ -299,7 +298,7 @@ The Request-line begins with a method, followed by the Request-URI and the proto
 Request-Line = Method SP Request-URI SP HTTP-Version CRLF
 ```
 
-###### Methods
+###### 메소드
 
 | <b>METHOD</b> | <b>DESCRIPTION</b> |
 | :---:         | :---         |

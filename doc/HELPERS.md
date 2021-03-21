@@ -1,6 +1,6 @@
 # Helpers
 
-Go back to the **[Table of Contents](https://github.com/trimstray/nginx-admins-handbook#table-of-contents)** or **[What's next?](https://github.com/trimstray/nginx-admins-handbook#whats-next)** section.
+Go back to the **[목차](https://github.com/trimstray/nginx-admins-handbook#table-of-contents)** or **[What's next?](https://github.com/trimstray/nginx-admins-handbook#whats-next)** section.
 
 - **[≡ Helpers](#helpers)**
   * [Installing from prebuilt packages](#installing-from-prebuilt-packages)
@@ -42,14 +42,14 @@ Go back to the **[Table of Contents](https://github.com/trimstray/nginx-admins-h
       * [Analyse log file and print requests with 4xx and 5xx](#analyse-log-file-and-print-requests-with-4xx-and-5xx)
       * [Analyse log file remotely](#analyse-log-file-remotely-1)
   * [Testing](#testing)
-    * [Build OpenSSL 1.0.2-chacha version](HELPERS.md#build-openssl-102-chacha-version)
+    * [Build OpenSSL 1.0.2-chacha 버전](HELPERS.md#build-openssl-102-chacha-version)
     * [Send request and show response headers](#send-request-and-show-response-headers)
     * [Send request with http method, user-agent, follow redirects and show response headers](#send-request-with-http-method-user-agent-follow-redirects-and-show-response-headers)
     * [Send multiple requests](#send-multiple-requests)
     * [Testing SSL connection](#testing-ssl-connection)
     * [Testing SSL connection (debug mode)](#testing-ssl-connection-debug-mode)
     * [Testing SSL connection with SNI support](#testing-ssl-connection-with-sni-support)
-    * [Testing SSL connection with specific SSL version](#testing-ssl-connection-with-specific-ssl-version)
+    * [Testing SSL connection with specific SSL 버전](#testing-ssl-connection-with-specific-ssl-version)
     * [Testing SSL connection with specific cipher](#testing-ssl-connection-with-specific-cipher)
     * [Testing OCSP Stapling](#testing-ocsp-stapling)
     * [Verify 0-RTT](#verify-0-rtt)
@@ -7425,7 +7425,7 @@ location / {
 
     add_header 'Access-Control-Allow-Origin' "$http_origin";
     add_header 'Access-Control-Allow-Credentials' 'true';
-    add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
+    add_header 'Access-Control-Allow-메소드' 'GET, POST, OPTIONS';
     add_header 'Access-Control-Allow-Headers' 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type';
 
   }
@@ -7434,7 +7434,7 @@ location / {
 
     add_header 'Access-Control-Allow-Origin' "$http_origin";
     add_header 'Access-Control-Allow-Credentials' 'true';
-    add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
+    add_header 'Access-Control-Allow-메소드' 'GET, POST, OPTIONS';
     add_header 'Access-Control-Allow-Headers' 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type';
 
   }
